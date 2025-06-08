@@ -86,3 +86,39 @@ So I thought it would be difficult to use only the pressure sensor, so I decided
 [Pic5] Idea sketch
 
 **Total time spent: 6h**
+
+# June 8th: Calculating required settings and designing the circuit
+
+It's 5:30am.
+
+Anyway, before designing, I decided to use Velostat as the pressure sensor last time, so I decided to calculate how much force can be recognized when using this Velostat.
+
+Since I had to calculate it by considering the user's palm pressure and finger click pressure, I first looked up the grams required for a typical mouse click.
+
+Most mouses have a recognition value of 50gF, so I used this value as a reference.
+Based on the weight of a typical human hand, the pressure generated when placing it on the device was calculated to be around 400gF.
+
+So I assumed the ideal pressure recognition range to be 0gF ~ 600gF.
+
+To calculate the pressure, I first looked for the thickness of the Velostat that can be purchased. (Ultimately, the resistance according to the degree of pressing varies depending on the thickness, so I used the thickness as the standard.)
+
+```plain
+Film Thickness for 1704: 4.0 mil (102 microns)
+Film Thickness for 1706: 6.0 mil (152.4 microns)
+```
+
+When I looked at the thickness of the Velostats that are commonly sold, I chose a Velostat with a thickness of 4.0 mil (I thought I could control it in more detail later).
+
+So I decided to use a Velostat with a thickness of 4.0 mil, and based on that, I investigated the resistance value.
+
+![Resistance of Velostat samples at different pressure levels](./assets/velostat_resistance.png)
+[Pic1] Resistance of Velostat samples at different pressure levels
+
+Next, I considered the size of the device.
+
+Since I was planning to make the device the size of a mouse pad, I decided to make the touch part of the device similar in size to Small (260mm x 215mm) considering the size of a typical mouse pad.
+
+![Mouse Pad Sizes](./assets/mousepad_size.png)
+[Pic2] Mouse Pad Sizes
+
+**Total time spent: 7.5h**
